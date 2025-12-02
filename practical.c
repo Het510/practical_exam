@@ -110,8 +110,8 @@ int main(){
 int mat [3] [3] = {{1,2,3},{4,5,6},{7,8,9}};
 int sum2 = 0;
 
-for(int i=4;i<=6;i++){
-    sum2 =sum2 + arr[i];
+for(int i=0;i<=3;i++){
+    sum2 =sum2 + mat[1][i];
 }
  printf("%d \n",sum2);
 
