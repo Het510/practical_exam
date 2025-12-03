@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            background-color: lightcoral;
+            padding: 20px;
+            border: 2px solid black;
+            flex: 1;
+        }
+
+
+         @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+        /* Between 600px and 800px */
+        @media (min-width: 600px) and (max-width: 800px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+
+        /* Above 800px */
+        @media (min-width: 800px) {
+            body {
+                background-color: lightyellow;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- QUE=1 -->
+   <table border="1" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Het</td>
+            <td>18</td>
+            <td>Modasa</td>
+        </tr>
+        <tr>
+            <td>Harsh</td>
+            <td>25</td>
+            <td>Ahmedabad</td>
+        </tr>
+        <tr>
+            <td>Dhruv</td>
+            <td>17</td>
+            <td>Gandhinagar</td>
+        </tr>
+    </tbody>
+</table>
+
+
+   <!-- QUE=2 -->
+    <div class="flex-container">
+        <div class="box">Box 1 </div>
+        <div class="box">Box 2 </div>
+    </div>
+
+
+    <!-- QUE=3 -->
+  
+
+    <!-- QUE=4 -->
+
+
+    <input type="text" id="userText" placeholder="Enter some text">
+    <button onclick="saveText()">Save Text</button>
+    <p id="display"></p>
+
+   
+
+    <script>
+        function saveText() {
+            let text = document.getElementById("userText").value;
+
+            localStorage.setItem("savedText", text);
+            document.getElementById("display").innerText = text;
+        }
+
+        document.getElementById("display").innerText = 
+            localStorage.getItem("savedText");
+    </script>
+
+
+</body>
+</html>

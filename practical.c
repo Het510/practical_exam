@@ -82,7 +82,6 @@ int main(){
  printf("Enter second number: ");
  scanf("%d", &n2);
 
-
  switch(cal){
     
   case 1: printf("%d \n",n1+n2);
