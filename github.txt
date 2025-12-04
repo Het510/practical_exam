@@ -1,0 +1,35 @@
+
+
+//QUE=1
+
+1. git init
+2. mkdir myfolder
+3. echo "first file">text1.txt
+4. echo "second file">text2.txt
+5. git add .
+6. git status
+7. git commit -m"updated file"
+
+//QUE=2
+
+1. git branch update-readme
+2. git checkout update-readme
+3. echo "new line1">text1.txt
+4. echo "new line2">text2.txt
+5. git add .
+6. git commit -m "updated file"
+7. git checkout main
+8. git merge update-readme
+
+//QUE=3
+
+1. echo "tempory text">temp.txt
+2. git stash
+3. git stash list
+4. git stash apply
+5. git rebase main
+6. git tag v1.1 
+
+//QUE=4
+
+done
